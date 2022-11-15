@@ -1,0 +1,16 @@
+{% extends "base2.html" %}
+{% block title %} 歡迎光臨 {% endblock %}
+{% block headmessage %}  {% endblock %}
+
+
+
+{% block content %}
+  
+<div class="d-grid gap-2 col-6 mx-auto">
+  <input class="btn btn-primary" type="button" value="上傳車輛" onclick="location.href='/car/'">
+  <input class="btn btn-primary" type="button" value="上傳車輛圖檔" onclick="location.href='/upload/'">
+  <input class="btn btn-primary" type="button" value="刪除車輛" onclick="location.href='/delete/'">
+  <input class="btn btn-primary" type="button" value="資料庫所有的圖片" onclick="location.href='/down/'">
+
+</div>
+{% endblock %}

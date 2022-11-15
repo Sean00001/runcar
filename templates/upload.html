@@ -1,0 +1,75 @@
+{% extends "base2.html" %}
+{% block title %} 歡迎光臨 {% endblock %}
+{% block headmessage %}  {% endblock %}
+
+{% block content %}
+
+
+
+<!--<div>-->
+
+<!--<select >-->
+<!--        {% for Cars in car %}-->
+<!--            <option value="{{ form.car }}">{{Cars.name}}</option>-->
+<!--        {% endfor %}-->
+<!--</select >-->
+
+<!--    </div>-->
+
+<!--  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--            <li><a class="dropdown-item" href="/bmi/">BMI計算</a></li>-->
+<!--            <li><a class="dropdown-item" href="/playlist/">播放清單</a></li>-->
+<!--            <li><hr class="dropdown-divider"></li>-->
+<!--            <li><a class="dropdown-item" href="/charts/">統計圖表</a></li>-->
+<!--  </ul>-->
+<form action="/upload/" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <br/>
+    <div class="form-row">
+<!--        <div class="form-group col-md-4">-->
+<!--              <input type="text" class="form-control" placeholder="name" aria-label="Last name" name="name">-->
+
+<!--        </div>-->
+        <div class="form-group col-md-4">
+            <input class="btn btn-primary" type="submit" value="上傳" />
+        </div>
+        <div class="form-group col-md-4">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            upload_photo<br>
+            {{ form.image }}<br>
+        </div>
+        <div class="form-group col-md-4">
+            option car<br>
+            {{ form.car }}<br>
+        </div>
+
+<!--      <div class="form-group col-md-4">-->
+<!--          <input type="text" class="form-control" placeholder="里 程" aria-label="Last name" name="test">-->
+<!--      </div>-->
+
+<!--        <div class="form-group col-md-4">-->
+<!--            <select >-->
+<!--        {% for Cars in car %}-->
+<!--            <option value="{{ form.car }}">{{Cars.name}}</option>-->
+<!--        {% endfor %}-->
+<!--    </select >-->
+
+<!--        </div>-->
+    </div>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
+
+
+
+
+
+
